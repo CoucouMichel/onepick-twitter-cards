@@ -1,0 +1,11 @@
+{
+  "league": "LIGUE 1",
+  "kickoff": "2026-10-18T18:45:00Z",
+  "matchDate": "2026-10-18",
+  "headline": "Le choc de 20h45 : **qui prend les points ce soir ?**",
+  "scenario": "2-1",
+  "surprise": "0-1",
+  "home": { "name": "Lyon", "raw": "Lyon", "odd": 2.10, "form": ["V", "V", "N", "D", "V"] },
+  "away": { "name": "Nice", "raw": "Nice", "odd": 3.40, "form": ["N", "V", "N", "V", "D"] },
+  "picksCount": 12
+}

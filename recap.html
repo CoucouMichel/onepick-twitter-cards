@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Récap X OnePick</title>
+<!--
+  Carte « récap », deuxième version (21 oct. 2026). La première (rayons, étoiles, chiffre doré, médailles,
+  bandeaux teintés, tuiles de stats) a été jugée « trop tape-à-l'œil » et illisible dans les bandes. Règles de
+  cette version : UN seul élément fort (le chiffre du héros), le reste calme et lisible ; lignes PLATES
+  séparées par un filet, texte blanc cassé à fort contraste, deux infos par ligne au plus ; le jaune
+  d'accent de l'appli n'apparaît qu'à deux endroits (« pts » du héros, bouton). Le maillot du héros garde
+  un halo discret à sa couleur. Ne pas y remettre de fonds colorés par ligne ni d'effets sans demande.
+  Format 4:5 (540 x 675, exporté à 1080 x 1350). Données : window.__CARD__ (recap.js).
+-->
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #060608; }
+  body { display: flex; justify-content: center; font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; color: #f4f5f7; }
+
+  #card {
+    --hc: #64748b;
+    width: 540px; height: 675px; position: relative; overflow: hidden; padding: 26px 28px 24px;
+    display: flex; flex-direction: column;
+    background: radial-gradient(circle at 78% 24%, color-mix(in srgb, var(--hc) 24%, transparent) 0%, transparent 46%), #0b0c0e;
+  }
+
+  .top { display: flex; justify-content: space-between; align-items: center; }
+  .logo { font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; font-size: 25px; font-weight: 900; letter-spacing: -1.1px; line-height: 1; }
+  .date { font-size: 12px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase; color: #9aa1ae; }
+
+  /* --- Héros ---------------------------------------------------------------------------------- */
+  .hero { position: relative; height: 246px; margin-top: 22px; }
+  .hero-l { position: absolute; left: 0; top: 0; width: 272px; }
+  .label { font-size: 13px; font-weight: 700; color: #9aa1ae; }
+  .big { font-size: 112px; font-weight: 900; letter-spacing: -5px; line-height: .95; margin-top: 8px; margin-left: -3px; white-space: nowrap; }
+  .big.n3 { font-size: 92px; letter-spacing: -4px; margin-top: 16px; }
+  .big small { font-size: 28px; font-weight: 800; letter-spacing: 0; color: #d6ed52; margin-left: 6px; }
+  .pname { margin-top: 14px; font-size: 24px; font-weight: 800; line-height: 1.15; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  /* « Daf, Riton et 2 autres l'avaient pické » : sans la mention, un lecteur non averti ne comprend pas que ce sont des picks. */
+  .who { margin-top: 9px; font-size: 15px; font-weight: 600; line-height: 1.35; color: #9aa1ae; }
+  .who .nm { color: #f4f5f7; font-weight: 700; }
+  .none { color: #f49342; font-weight: 700; }
+  /* Colonne de droite : le maillot (cote en pastille dessus), puis le RÉSULTAT du match, à part des pseudos. */
+  .hero-r { position: absolute; right: 0; top: 0; width: 196px; display: flex; flex-direction: column; align-items: center; }
+  .jw { position: relative; width: 150px; height: 150px; display: flex; align-items: center; justify-content: center; }
+  .jw img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 14px 20px rgba(0, 0, 0, .7)); }
+  .ph { width: 110px; height: 110px; border-radius: 50%; background: #1b1e25; border: 2px solid #2a2e38; display: flex; align-items: center; justify-content: center; font-size: 38px; font-weight: 900; color: #8c909c; }
+  .cote { position: absolute; left: 50%; bottom: -12px; transform: translateX(-50%); font-size: 13px; font-weight: 800; color: #cdd2dc; white-space: nowrap;
+          background: #0b0c0e; border: 1px solid rgba(255, 255, 255, .22); border-radius: 99px; padding: 3px 12px; }
+  .cote b { color: #fff; font-weight: 900; }
+  .res { margin-top: 26px; width: 100%; text-align: center; }
+  .res .sc { font-size: 38px; font-weight: 900; letter-spacing: -1px; line-height: 1; }
+  .res .vs { margin-top: 7px; font-size: 14px; font-weight: 600; color: #9aa1ae; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+
+  /* --- Podium : lignes plates, deux infos au plus ------------------------------------------------ */
+  .rows { margin-top: 8px; }
+  .row { display: grid; grid-template-columns: auto 1fr auto; align-items: center; gap: 14px; height: 74px; border-top: 1px solid rgba(255, 255, 255, .09); }
+  /* Tableau d'affichage : maillot du pick, score vu de son camp, maillot de l'adversaire (plus petit, estompé). */
+  .board { display: flex; align-items: center; gap: 7px; }
+  .board img { width: 38px; height: 38px; object-fit: contain; filter: drop-shadow(0 3px 5px rgba(0, 0, 0, .55)); }
+  .board img.opp { width: 30px; height: 30px; opacity: .6; }
+  .bph { width: 30px; height: 30px; border-radius: 50%; background: #1b1e25; border: 1px solid #2a2e38; display: flex; align-items: center; justify-content: center; font-size: 11px; font-weight: 900; color: #8c909c; }
+  .bph.opp { width: 26px; height: 26px; opacity: .6; }
+  .bsc { min-width: 46px; text-align: center; font-size: 21px; font-weight: 900; letter-spacing: -.3px; }
+  .rt { min-width: 0; }
+  .rm { font-size: 18px; font-weight: 800; color: #f4f5f7; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  .rs { font-size: 13.5px; font-weight: 600; color: #9aa1ae; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; margin-top: 3px; }
+  .rs .nm { color: #e4e7ee; font-weight: 700; }
+  .tag { color: #f49342; font-weight: 800; }
+  .rp { font-size: 26px; font-weight: 900; letter-spacing: -.5px; white-space: nowrap; }
+  .rp small { font-size: 13px; font-weight: 700; color: #9aa1ae; margin-left: 3px; letter-spacing: 0; }
+
+  .foot { margin-top: auto; }
+  .stat { font-size: 13.5px; font-weight: 600; color: #9aa1ae; text-align: center; margin-bottom: 12px; }
+  .stat b { color: #f4f5f7; font-weight: 800; }
+  .cta { background: #d6ed52; color: #08090a; border-radius: 16px; padding: 13px 18px; display: flex; justify-content: space-between; align-items: center; gap: 10px; }
+  .cta-main { font-size: 17px; font-weight: 900; letter-spacing: -.3px; line-height: 1.1; }
+  .cta-sub { font-size: 12px; font-weight: 700; opacity: .75; margin-top: 3px; }
+  .cta-pill { background: #08090a; color: #d6ed52; font-size: 12.5px; font-weight: 900; padding: 9px 13px; border-radius: 10px; white-space: nowrap; display: flex; align-items: center; gap: 6px; }
+</style>
+</head>
+<body>
+<div id="card"></div>
+<script src="color.js"></script>
+<script>
+(function () {
+    const D = window.__CARD__;
+    if (!D) return;
+    const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const initials = (n) => String(n).replace(/[^A-Za-zÀ-ÿ0-9 ]/g, '').split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join('').toUpperCase();
+
+    const pickedName = (g) => (g.side === 'home' ? g.home : g.away);
+    const oppName = (g) => (g.side === 'home' ? g.away : g.home);
+    // « Daf, Riton et 2 autres l'avaient pické » (au singulier : « l'avait pické »). Personne : une phrase,
+    // l'équipe reste affichée quand même.
+    const pickedBy = (players, max) => {
+        if (!players.length) return `<span class="none">Personne ne l'avait pické. Tu aurais dû ?</span>`;
+        const shown = players.slice(0, max), rest = players.length - shown.length;
+        const names = shown.map(esc).join(', ') + (rest > 0 ? ` et ${rest} autre${rest > 1 ? 's' : ''}` : '');
+        return `<span class="nm">${names}</span> ${players.length > 1 ? "l'avaient" : "l'avait"} pické`;
+    };
+
+    const jer = (src, name, cls) => (src ? `<img class="${cls}" src="${src}" alt="">` : `<div class="bph ${cls}">${esc(initials(name))}</div>`);
+    function rowHtml(r) {
+        return `<div class="row">
+          <div class="board">${jer(r.jersey, pickedName(r), '')}<div class="bsc">${esc(r.sm)}–${esc(r.so)}</div>${jer(r.oppJersey, oppName(r), 'opp')}</div>
+          <div class="rt"><div class="rm">${esc(pickedName(r))}${r.tag ? ` <span class="tag">${esc(r.tag)}</span>` : ''}</div><div class="rs">${pickedBy(r.players, 2)}</div></div>
+          <div class="rp">+${esc(r.points)}<small>pts</small></div>
+        </div>`;
+    }
+
+    async function main() {
+        const h = D.hero;
+        const hc = await OPColor.extractColor(h.jersey);
+        const card = document.getElementById('card');
+        if (hc.hue != null) card.style.setProperty('--hc', hc.hex);
+        card.innerHTML = `
+          <div class="top"><div class="logo">ONEPICK</div><div class="date">${esc(D.chip)}</div></div>
+          <div class="hero">
+            <div class="hero-l">
+              <div class="label">${esc(D.heroLabel)}</div>
+              <div class="big${String(h.points).length >= 3 ? ' n3' : ''}">+${esc(h.points)}<small>pts</small></div>
+              <div class="pname">${esc(pickedName(h))}</div>
+              <div class="who">${pickedBy(h.players, 3)}</div>
+            </div>
+            <div class="hero-r">
+              <div class="jw">${h.jersey ? `<img src="${h.jersey}" alt="">` : `<div class="ph">${esc(initials(pickedName(h)))}</div>`}<div class="cote">cote <b>${esc(h.odd)}</b></div></div>
+              <div class="res"><div class="sc">${esc(h.sm)}–${esc(h.so)}</div><div class="vs">contre ${esc(oppName(h))}</div></div>
+            </div>
+          </div>
+          <div class="rows">${D.rows.map(rowHtml).join('')}</div>
+          <div class="foot">
+            <div class="stat"><b>${esc(D.stats.winPct)} %</b> de picks gagnants${D.stats.period ? ' ' + esc(D.stats.period) : ''}</div>
+            <div class="cta">
+              <div><div class="cta-main">${esc(D.cta.main)}</div><div class="cta-sub">${esc(D.cta.sub)}</div></div>
+              <div class="cta-pill">onepick.football <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#d6ed52" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+            </div>
+          </div>`;
+        await Promise.all([...card.querySelectorAll('img')].map((i) => (i.decode ? i.decode().catch(() => {}) : null)));
+        document.body.dataset.ready = '1';
+    }
+    main();
+})();
+</script>
+</body>
+</html>
