@@ -4,6 +4,8 @@ Générateurs de cartes image pour les posts X de [@OnePickFootball](https://x.c
 
 - **`generate.js`** : carte de match « tu sécurises ou tu tentes le braquage ? » (1080 x 1350, format 4:5).
 - **`recap.js`** : carte récap du jour (ou de la semaine avec `--days 7`) : un héros, trois lignes, un appel à l'action.
+- **`affiche.js`** : « affiche du soir », UNE image qui présente 1 à 4 matchs (maillots, cotes, points d'une victoire 1-0), pour un post unique.
+  `node affiche.js --in affiche.json --out affiche.png` ; JSON comme `exemples/affiche-21-oct.json` (aucun maillot à fournir : lus dans `jerseys/`).
 
 > **Ceci est une COPIE.** La source de vérité est le dossier `tools/twitter-cards/` du projet privé OnePick
 > (`footpick`). Ce dépôt est public seulement pour qu'une action planifiée, qui n'a aucun accès au dépôt privé,

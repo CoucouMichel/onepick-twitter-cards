@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<title>Affiche du soir X OnePick</title>
+<!--
+  Carte « affiche du soir » (21 oct. 2026) : UNE image qui présente jusqu'à 4 matchs d'un coup, pour un post unique.
+  Pourquoi pas 4 cartes de match dans un même post : X recadre les images d'un post à plusieurs images, et le bas de
+  la carte de match (les encadrés « +33 pts / +39 pts ») serait coupé dans le fil. Ici tout est dans l'image, dans un
+  seul cadre 4:5 (540 x 675, exporté à 1080 x 1350, que X n'a pas à rogner).
+  Une ligne par match : maillot, nom, cote et POINTS d'une victoire 1-0 de chaque camp (la règle de score en actes,
+  sans phrase), l'heure au centre. Le même vocabulaire visuel que card.html (fond sombre, jaune d'accent pour la
+  cote, vert pour les points) ; sobre, comme le récap : pas de fond coloré par ligne, pas de halos.
+  Confidentialité : aucune donnée de picks de joueurs, jamais (le camp choisi n'est révélé qu'au coup d'envoi).
+  Données : window.__CARD__ (affiche.js).
+-->
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html, body { background: #060608; }
+  body { display: flex; justify-content: center; font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif; color: #f4f5f7; }
+
+  #card {
+    --jr: 74px;
+    width: 540px; height: 675px; position: relative; overflow: hidden; padding: 24px 26px 22px;
+    display: flex; flex-direction: column;
+    background: radial-gradient(circle at 50% 0%, #1c1f14 0%, #0b0c0e 62%); background-color: #0b0c0e;
+  }
+  #card.n4 { --jr: 56px; }
+
+  .top { display: flex; justify-content: space-between; align-items: center; }
+  .logo { font-family: 'Plus Jakarta Sans', 'Inter', sans-serif; font-size: 26px; font-weight: 900; letter-spacing: -1.1px; line-height: 1; }
+  .chips { display: flex; gap: 6px; }
+  .chip { font-size: 11px; font-weight: 800; letter-spacing: 1px; text-transform: uppercase; color: #aeb3bf; background: #14161b; border: 1px solid #23262d; border-radius: 99px; padding: 4px 11px; }
+  .chip.hi { color: #08090a; background: #d6ed52; border-color: #d6ed52; }
+  .title { margin-top: 14px; font-size: 24px; font-weight: 900; letter-spacing: -.6px; line-height: 1.1; }
+  .title b { color: #d6ed52; font-weight: 900; }
+
+  .rows { flex: 1; margin-top: 12px; display: flex; flex-direction: column; }
+  .row { flex: 1; min-height: 0; display: grid; grid-template-columns: minmax(0, 1fr) 76px minmax(0, 1fr); align-items: center; gap: 4px; border-top: 1px solid rgba(255, 255, 255, .09); }
+  .side { display: flex; align-items: center; gap: 9px; min-width: 0; }
+  .side.away { flex-direction: row-reverse; text-align: right; }
+  .jw { width: var(--jr); height: var(--jr); flex: none; display: flex; align-items: center; justify-content: center; }
+  .jw img { width: 100%; height: 100%; object-fit: contain; filter: drop-shadow(0 8px 12px rgba(0, 0, 0, .7)); }
+  .ph { width: 82%; height: 82%; border-radius: 50%; background: #1b1e25; border: 2px solid #2a2e38; display: flex; align-items: center; justify-content: center; font-size: 20px; font-weight: 900; color: #8c909c; }
+  .txt { min-width: 0; }
+  .nm { font-size: 16px; font-weight: 800; line-height: 1.12; letter-spacing: -.2px; }
+  .n4 .nm { font-size: 14.5px; }
+  .vals { margin-top: 6px; display: flex; align-items: center; gap: 7px; }
+  .away .vals { flex-direction: row-reverse; }
+  .odd { background: #d6ed52; color: #090a0c; font-size: 14px; font-weight: 900; padding: 2px 9px; border-radius: 99px; }
+  .pts { color: #38d47e; font-size: 15px; font-weight: 900; letter-spacing: -.3px; white-space: nowrap; }
+  .pts small { font-size: 10.5px; font-weight: 800; }
+  /* « +32 pts » seul ne parle pas (retour du propriétaire, 21 oct.) : on dit pour quel résultat, sous le total. */
+  .gain { display: flex; flex-direction: column; line-height: 1.05; }
+  .away .gain { align-items: flex-end; }
+  .if { font-size: 10.5px; font-weight: 700; color: #9aa1ae; margin-top: 2px; white-space: nowrap; }
+  .n4 .if { font-size: 9.5px; }
+  .n4 .pts { font-size: 14px; } .n4 .odd { font-size: 13px; }
+
+  .mid { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }
+  .time { font-size: 21px; font-weight: 800; letter-spacing: -.5px; line-height: 1; }
+  .lg { margin-top: 5px; font-size: 8.5px; font-weight: 800; letter-spacing: .8px; text-transform: uppercase; color: #8c909c; line-height: 1.2; }
+
+  .legend { font-size: 11px; font-weight: 600; color: #8c909c; text-align: center; padding: 8px 0 11px; border-top: 1px solid rgba(255, 255, 255, .09); }
+  .legend b { color: #38d47e; font-weight: 800; }
+
+  .cta { background: #d6ed52; color: #08090a; border-radius: 16px; padding: 13px 18px; display: flex; justify-content: space-between; align-items: center; gap: 12px; box-shadow: 0 8px 25px rgba(214, 237, 82, .22); }
+  .cta-main { font-size: 17px; font-weight: 900; letter-spacing: -.3px; line-height: 1.1; }
+  .cta-sub { font-size: 11.5px; font-weight: 700; opacity: .78; margin-top: 3px; }
+  .cta-pill { background: #08090a; color: #d6ed52; font-size: 12.5px; font-weight: 900; padding: 9px 13px; border-radius: 10px; white-space: nowrap; display: flex; align-items: center; gap: 6px; }
+</style>
+</head>
+<body>
+<div id="card"></div>
+<script>
+(function () {
+    const D = window.__CARD__;
+    if (!D) return;
+    const esc = (s) => String(s == null ? '' : s).replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const initials = (n) => String(n).replace(/[^A-Za-zÀ-ÿ0-9 ]/g, '').split(/\s+/).filter(Boolean).slice(0, 2).map((w) => w[0]).join('').toUpperCase();
+
+    const sideHtml = (t, cls) => `
+        <div class="side ${cls}">
+          <div class="jw">${t.jersey ? `<img src="${t.jersey}" alt="">` : `<div class="ph">${esc(initials(t.name))}</div>`}</div>
+          <div class="txt"><div class="nm">${esc(t.name)}</div>
+            <div class="vals"><span class="odd">${esc(t.oddLabel)}</span><span class="gain"><span class="pts">+${esc(t.points)}<small> pts</small></span><span class="if">si victoire 1-0</span></span></div></div>
+        </div>`;
+    const rowHtml = (m) => `
+        <div class="row">
+          ${sideHtml(m.home, 'home')}
+          <div class="mid"><div class="time">${esc(m.time)}</div>${m.league ? `<div class="lg">${esc(m.league)}</div>` : ''}</div>
+          ${sideHtml(m.away, 'away')}
+        </div>`;
+
+    async function main() {
+        const card = document.getElementById('card');
+        if (D.matches.length > 3) card.classList.add('n4');
+        card.innerHTML = `
+          <div class="top"><div class="logo">ONEPICK</div><div class="chips">${D.leagueChip ? `<div class="chip">${esc(D.leagueChip)}</div>` : ''}<div class="chip hi">${esc(D.dayLabel)}</div></div></div>
+          <div class="title">${D.title}</div>
+          <div class="rows">${D.matches.map(rowHtml).join('')}</div>
+          <div class="legend">Points gagnés si ton pick l'emporte 1-0 : <b>cote × 10</b> + 5 par but + 5 clean sheet</div>
+          <div class="cta">
+            <div><div class="cta-main">${esc(D.cta.main)}</div><div class="cta-sub">${esc(D.cta.sub)}</div></div>
+            <div class="cta-pill">onepick.football <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="#d6ed52" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+          </div>`;
+        await Promise.all([...card.querySelectorAll('img')].map((i) => (i.decode ? i.decode().catch(() => {}) : null)));
+        document.body.dataset.ready = '1';
+    }
+    main();
+})();
+</script>
+</body>
+</html>

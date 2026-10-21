@@ -1,0 +1,57 @@
+{
+  "title": "Ce soir, **tu pickes** qui ?",
+  "matches": [
+    {
+      "league": "CHAMPIONS LEAGUE",
+      "kickoff": "2026-10-21T16:45:00Z",
+      "matchDate": "2026-10-21",
+      "home": {
+        "raw": "Lille",
+        "odd": 2.17
+      },
+      "away": {
+        "raw": "Galatasaray",
+        "odd": 3.05
+      }
+    },
+    {
+      "league": "CHAMPIONS LEAGUE",
+      "kickoff": "2026-10-21T19:00:00Z",
+      "matchDate": "2026-10-21",
+      "home": {
+        "raw": "Bayern Munich",
+        "odd": 2.15
+      },
+      "away": {
+        "raw": "Arsenal",
+        "odd": 3.1
+      }
+    },
+    {
+      "league": "CHAMPIONS LEAGUE",
+      "kickoff": "2026-10-21T19:00:00Z",
+      "matchDate": "2026-10-21",
+      "home": {
+        "raw": "Club Brugge KV",
+        "odd": 2.1
+      },
+      "away": {
+        "raw": "Lens",
+        "odd": 3.14
+      }
+    },
+    {
+      "league": "CHAMPIONS LEAGUE",
+      "kickoff": "2026-10-21T19:00:00Z",
+      "matchDate": "2026-10-21",
+      "home": {
+        "raw": "Real Madrid",
+        "odd": 1.27
+      },
+      "away": {
+        "raw": "RB Leipzig",
+        "odd": 8.6
+      }
+    }
+  ]
+}
