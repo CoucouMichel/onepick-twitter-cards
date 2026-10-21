@@ -21,7 +21,7 @@
 
 const path = require('path');
 const lib = require('./lib');
-const { loadJson, toDataUri, normalizeTeamName, calcPoints, parseArgs, str, die, clubDisplayName, sbGet, jerseyDataUri, parisLabels, renderPng } = lib;
+const { localJerseyDataUri, loadJson, toDataUri, normalizeTeamName, calcPoints, parseArgs, str, die, clubDisplayName, sbGet, jerseyDataUri, parisLabels, renderPng } = lib;
 lib.ensureProxy(__filename);
 const opt = parseArgs(process.argv.slice(2));
 
@@ -41,7 +41,8 @@ const fmt = (n) => Number(n).toFixed(2);
     //   preds   : [{ username, points_earned, locked_odd, picked_team ('home'|'away'), game_id }] picks RÉGLÉS de la période ;
     //   games   : [{ id, match_date, home_team_name, away_team_name, home_score, away_score, league_name,
     //                base_home_odd, base_away_odd }] matchs TERMINÉS (FT / AET / PEN) de la période ;
-    //   jerseys : { "<normalizeTeamName(nom)>": data URI | texte SVG | chemin de fichier } (facultatif : initiales sinon).
+    //   jerseys : { "<normalizeTeamName(nom)>": data URI | texte SVG | chemin de fichier } (FACULTATIF : sans lui, les maillots
+    //             sont lus dans le dossier local `jerseys/` à côté des scripts — HD de préférence —, sinon initiales).
     const offline = str(opt.data) ? loadJson(str(opt.data)) : null;
     const preds = offline ? (offline.preds || []) : await sbGet(`user_predictions?match_date=gte.${from}&match_date=lte.${to}&points_earned=not.is.null&select=username,points_earned,locked_odd,picked_team,game_id&limit=3000`);
     if (!preds.length) die(`Aucun pick réglé du ${from} au ${to}.`);
@@ -108,7 +109,10 @@ const fmt = (n) => Number(n).toFixed(2);
     const heroV = view(hero);
     const rowsV = podium.map((g, i) => view(g, { rank: i + 2, tag: g === braq ? 'braquage' : '' }));
     // Maillots : fournis (mode autonome) ou lus dans le bucket public team-logos (réseau).
-    const jersey = (raw, hd) => (offline ? Promise.resolve(toDataUri((offline.jerseys || {})[normalizeTeamName(raw)])) : jerseyDataUri(raw, { hd }));
+    // Mode autonome : maillot fourni dans `jerseys`, sinon dossier local `jerseys/` (HD de préférence), sinon initiales.
+    const jersey = (raw, hd) => (offline
+        ? Promise.resolve(toDataUri((offline.jerseys || {})[normalizeTeamName(raw)]) || localJerseyDataUri(raw, { hd }) || (console.warn(`Avertissement : pas de maillot pour « ${raw} » : initiales à la place.`), null))
+        : jerseyDataUri(raw, { hd }));
     const [heroJersey, ...rest] = await Promise.all([jersey(heroV.raw, true), ...rowsV.flatMap((r) => [jersey(r.raw, false), jersey(r.oppRaw, false)])]);
     heroV.jersey = heroJersey;
     rowsV.forEach((r, i) => { r.jersey = rest[i * 2]; r.oppJersey = rest[i * 2 + 1]; });

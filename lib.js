@@ -67,22 +67,37 @@ async function sbGet(pathAndQuery) {
     return r.json();
 }
 
-// Maillot du bucket public team-logos en data URI : <slug>-hd.webp (si hd), <slug>.webp, <slug>.svg.
-// Une sélection nationale n'y est pas : null (le gabarit affiche alors les initiales).
+// --- Maillots -------------------------------------------------------------------------------------------
+// Dossier `jerseys/` à côté des scripts : COPIE du bucket public team-logos (voir sync-jerseys.js). Il existe dans le
+// dépôt public cloné par l'action planifiée, dont le shell n'atteint pas supabase.co : les maillots (HD de préférence)
+// y sont lus localement, sans réseau. Absent ou incomplet : repli sur le bucket (réseau), puis sur les initiales.
+const JERSEY_DIR = path.join(__dirname, 'jerseys');
+const MIME = { '.webp': 'image/webp', '.svg': 'image/svg+xml' };
+// Ordre de préférence : grande carte -> HD, 512 px, SVG ; petite vignette -> 512 px, HD, SVG.
+const jerseyFiles = (slug, hd) => (hd ? [`${slug}-hd.webp`, `${slug}.webp`, `${slug}.svg`] : [`${slug}.webp`, `${slug}-hd.webp`, `${slug}.svg`]);
+function localJerseyDataUri(raw, { hd = true } = {}) {
+    for (const f of jerseyFiles(normalizeTeamName(raw), hd)) {
+        const p = path.join(JERSEY_DIR, f);
+        try { if (fs.existsSync(p)) return `data:${MIME[path.extname(f)]};base64,${fs.readFileSync(p).toString('base64')}`; } catch (e) { /* suivant */ }
+    }
+    return null;
+}
+// Maillot en data URI : dossier local d'abord, puis bucket public team-logos (réseau). Une sélection nationale n'a pas
+// de maillot : null (le gabarit affiche alors les initiales).
 async function jerseyDataUri(raw, { hd = true } = {}) {
+    const local = localJerseyDataUri(raw, { hd });
+    if (local) return local;
     const slug = normalizeTeamName(raw);
-    const files = [...(hd ? [`${slug}-hd.webp`] : []), `${slug}.webp`, `${slug}.svg`];
-    for (const f of files) {
+    for (const f of jerseyFiles(slug, hd)) {
         try {
             const r = await fetch(`${JERSEY_BASE}/${f}`);
             if (!r.ok) continue;
-            return `data:${f.endsWith('.svg') ? 'image/svg+xml' : 'image/webp'};base64,${Buffer.from(await r.arrayBuffer()).toString('base64')}`;
+            return `data:${MIME[path.extname(f)]};base64,${Buffer.from(await r.arrayBuffer()).toString('base64')}`;
         } catch (e) { /* fichier suivant */ }
     }
-    console.warn(`Avertissement : pas de maillot pour « ${raw} » (slug ${slug}) dans le bucket team-logos : initiales à la place.`);
+    console.warn(`Avertissement : pas de maillot pour « ${raw} » (slug ${slug}) : initiales à la place.`);
     return null;
 }
-
 
 // --- Mode autonome (sans réseau) ---------------------------------------------------------------------
 // Pourquoi : une action planifiée de type « Chat » n'atteint pas supabase.co depuis son shell (réseau
@@ -142,4 +157,4 @@ async function renderPng(template, data, out, { width = 540, height = 675 } = {}
     }
 }
 
-module.exports = { loadJson, toDataUri, calcPoints, ensureProxy, parseArgs, str, die, normalizeTeamName, clubDisplayName, sbGet, jerseyDataUri, parisLabels, escHtml, renderPng, SUPABASE_URL };
+module.exports = { localJerseyDataUri, JERSEY_DIR, loadJson, toDataUri, calcPoints, ensureProxy, parseArgs, str, die, normalizeTeamName, clubDisplayName, sbGet, jerseyDataUri, parisLabels, escHtml, renderPng, SUPABASE_URL, SUPABASE_KEY };
