@@ -100,11 +100,13 @@
         return `<span class="nm">${names}</span> ${players.length > 1 ? "l'avaient" : "l'avait"} pické`;
     };
 
+    // Une ligne du podium est large de ~480 px : « Fabinho31, Tontom91 et 2 autres l'avaient pické » ne tient pas et la
+    // mention était coupée en « l'a… » (constaté sur le test du 21 oct.). Au-delà de 2 joueurs : un pseudo + « et N autres ».
     const jer = (src, name, cls) => (src ? `<img class="${cls}" src="${src}" alt="">` : `<div class="bph ${cls}">${esc(initials(name))}</div>`);
     function rowHtml(r) {
         return `<div class="row">
           <div class="board">${jer(r.jersey, pickedName(r), '')}<div class="bsc">${esc(r.sm)}–${esc(r.so)}</div>${jer(r.oppJersey, oppName(r), 'opp')}</div>
-          <div class="rt"><div class="rm">${esc(pickedName(r))}${r.tag ? ` <span class="tag">${esc(r.tag)}</span>` : ''}</div><div class="rs">${pickedBy(r.players, 2)}</div></div>
+          <div class="rt"><div class="rm">${esc(pickedName(r))}${r.tag ? ` <span class="tag">${esc(r.tag)}</span>` : ''}</div><div class="rs">${pickedBy(r.players, r.players.length > 2 ? 1 : 2)}</div></div>
           <div class="rp">+${esc(r.points)}<small>pts</small></div>
         </div>`;
     }
