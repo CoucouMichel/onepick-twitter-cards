@@ -1,0 +1,42 @@
+# Copie chaque nuit les maillots du bucket Supabase `team-logos` dans `jerseys/`.
+#
+# Pourquoi : l'action planifiée qui prépare les posts X n'atteint pas supabase.co depuis son shell, mais atteint GitHub.
+# Les maillots publiés depuis le générateur de maillots (OnePick) arrivent donc ici sans geste manuel.
+# `--force` : un maillot REPUBLIÉ garde souvent la même taille, sans lui il resterait périmé ; git ne commite que ce qui
+# a vraiment changé. Passage à 2 h 30 UTC (3 h 30 ou 4 h 30 à Paris), avant la routine de 5 h 47.
+# Lecture seule sur Supabase (clé publiable, déjà publique dans l'appli) : aucun secret à configurer.
+name: Synchroniser les maillots
+
+on:
+  schedule:
+    - cron: '30 2 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-jerseys
+  cancel-in-progress: false
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Copier le bucket team-logos
+        run: node sync-jerseys.js --dir jerseys --force
+      - name: Commiter s'il y a du nouveau
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add jerseys
+          if git diff --cached --quiet; then
+            echo "Aucun nouveau maillot."
+          else
+            git commit -m "Maillots : synchronisation automatique du bucket team-logos"
+            git push
+          fi
