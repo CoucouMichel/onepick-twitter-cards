@@ -57,7 +57,9 @@ const fmt = (n) => Number(n).toFixed(2);
     const stats = {
         picks: preds.length,
         players: new Set(preds.map((p) => p.username)).size,
-        winners: preds.filter((p) => p.points_earned > 0).length,
+        // Gagnant = le camp pické a VAINCU. Pas « points > 0 » : une défaite rapporte aussi des points (5 par but marqué), donc
+        // un pick perdu 2-3 comptait comme gagnant (« 97 % de picks gagnants » affiché le 22 oct. 2026, bien trop haut).
+        winners: preds.filter((p) => { const g = games[p.game_id]; if (!g) return false; const mine = p.picked_team === 'home' ? g.home_score : g.away_score; const opp = p.picked_team === 'home' ? g.away_score : g.home_score; return mine > opp; }).length,
         totalPts: preds.reduce((s, p) => s + p.points_earned, 0),
         matches: ids.length,
     };
