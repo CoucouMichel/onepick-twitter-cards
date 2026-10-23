@@ -109,7 +109,7 @@ const fmt = (n) => Number(n).toFixed(2);
         so: g.side === 'home' ? g.game.away_score : g.game.home_score,
     });
     const heroV = view(hero);
-    const rowsV = podium.map((g, i) => view(g, { rank: i + 2, tag: g === braq ? 'braquage' : '' }));
+    const rowsV = podium.map((g, i) => view(g, { rank: i + 2, tag: '', braquage: g === braq })); // étiquette « braquage » retirée de la carte (23 oct. 2026) ; le fait reste imprimé pour le texte du post
     // Maillots : fournis (mode autonome) ou lus dans le bucket public team-logos (réseau).
     // Mode autonome : maillot fourni dans `jerseys`, sinon dossier local `jerseys/` (HD de préférence), sinon initiales.
     const jersey = (raw, hd) => (offline
@@ -137,7 +137,7 @@ const fmt = (n) => Number(n).toFixed(2);
     console.log('--- FAITS pour le texte du post ---');
     const line = (v) => `${v.home} ${v.hs}-${v.as} ${v.away} · pick ${v.raw} · cote ${v.odd} · +${v.points} pts · ${v.players.length ? v.players.join(', ') : "PERSONNE ne l'avait pické"}`;
     console.log(`Héros : ${line(heroV)}  (${heroV.players.length} joueur${heroV.players.length > 1 ? 's' : ''})`);
-    rowsV.forEach((r) => console.log(`#${r.rank}    : ${line(r)}${r.tag ? '  [BRAQUAGE]' : ''}`));
+    rowsV.forEach((r) => console.log(`#${r.rank}    : ${line(r)}${r.braquage ? '  [BRAQUAGE]' : ''}`));
     console.log(`Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : ${stats.players} joueurs, ${stats.picks} picks réglés sur ${stats.matches} matchs, ${stats.winners} gagnants (${stats.winPct}%), ${stats.totalPts} pts distribués`);
     if (!braq) console.log(`Pas de braquage (aucun pick gagnant à cote >= ${BRAQUAGE_ODD}).`);
 })();
