@@ -102,11 +102,13 @@
 
     // Une ligne du podium est large de ~480 px : « Fabinho31, Tontom91 et 2 autres l'avaient pické » ne tient pas et la
     // mention était coupée en « l'a… » (constaté sur le test du 21 oct.). Au-delà de 2 joueurs : un pseudo + « et N autres ».
+    // « Personne ne l'avait pické. Tu aurais dû ? » n'est écrit que sur le HÉROS : sur une ligne du podium il était coupé par
+    // l'ellipse (« Tu aurais… ») et il se répétait (retour du propriétaire, 23 oct. 2026). Sans joueur, la ligne n'a pas de 2e ligne.
     const jer = (src, name, cls) => (src ? `<img class="${cls}" src="${src}" alt="">` : `<div class="bph ${cls}">${esc(initials(name))}</div>`);
     function rowHtml(r) {
         return `<div class="row">
           <div class="board">${jer(r.jersey, pickedName(r), '')}<div class="bsc">${esc(r.sm)}–${esc(r.so)}</div>${jer(r.oppJersey, oppName(r), 'opp')}</div>
-          <div class="rt"><div class="rm">${esc(pickedName(r))}${r.tag ? ` <span class="tag">${esc(r.tag)}</span>` : ''}</div><div class="rs">${pickedBy(r.players, r.players.length > 2 ? 1 : 2)}</div></div>
+          <div class="rt"><div class="rm">${esc(pickedName(r))}${r.tag ? ` <span class="tag">${esc(r.tag)}</span>` : ''}</div>${r.players.length ? `<div class="rs">${pickedBy(r.players, r.players.length > 2 ? 1 : 2)}</div>` : ''}</div>
           <div class="rp">+${esc(r.points)}<small>pts</small></div>
         </div>`;
     }
