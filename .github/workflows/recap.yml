@@ -1,0 +1,49 @@
+# Génère chaque nuit le récap de la VEILLE (image + faits) et le dépose dans out/.
+#
+# Pourquoi : la routine du matin (une action planifiée sans personne devant) se fait refuser l'exécution de scripts
+# clonés (« Code from External »). Ici le code tourne dans GitHub ; la routine ne lit plus que des DONNÉES (out/recap.png,
+# out/faits.txt) et écrit le texte du post. Lecture seule sur Supabase (clé publiable, déjà publique dans l'appli).
+# 3 h UTC = 4 h (hiver) ou 5 h (été) à Paris : après le règlement des picks de la veille, avant la routine de 5 h 47.
+name: Récap de la veille
+
+on:
+  schedule:
+    - cron: '0 3 * * *'
+  workflow_dispatch:
+    inputs:
+      date:
+        description: 'Date AAAA-MM-JJ des matchs à récapituler (défaut : la veille, à Paris)'
+        required: false
+
+permissions:
+  contents: write
+
+concurrency:
+  group: recap
+  cancel-in-progress: false
+
+jobs:
+  recap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Installer Playwright et Chromium
+        run: |
+          npm install --no-save playwright
+          npx playwright install --with-deps chromium
+      - name: Générer le récap
+        run: |
+          D="${{ github.event.inputs.date }}"
+          if [ -z "$D" ]; then D=$(TZ=Europe/Paris date -d yesterday +%F); fi
+          mkdir -p out
+          node recap.js --date "$D" --out out/recap.png | tee out/faits.txt
+          echo "$D" > out/date.txt
+      - name: Commiter
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add out
+          if git diff --cached --quiet; then echo "Rien de changé."; else git commit -m "Récap de la veille (automatique)" && git push; fi
