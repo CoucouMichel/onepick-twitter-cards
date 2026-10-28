@@ -3,12 +3,18 @@
 # Pourquoi : la routine du matin (une action planifiée sans personne devant) se fait refuser l'exécution de scripts
 # clonés (« Code from External »). Ici le code tourne dans GitHub ; la routine ne lit plus que des DONNÉES (out/recap.png,
 # out/faits.txt) et écrit le texte du post. Lecture seule sur Supabase (clé publiable, déjà publique dans l'appli).
-# 3 h UTC = 4 h (hiver) ou 5 h (été) à Paris : après le règlement des picks de la veille, avant la routine de 5 h 47.
+# La date est celle de la VEILLE à Paris : un passage avant minuit Paris récapitulerait l'avant-veille, d'où les passages après 22 h 17 UTC seulement.
 name: Récap de la veille
 
+# GitHub retarde souvent les tâches planifiées des petits dépôts (constaté : un cron de 2 h 30 UTC parti à 8 h 08, deux jours de
+# suite, et le récap de 3 h 00 jamais parti avant la routine). On déclenche donc PLUSIEURS fois, à des minutes « creuses » (pas
+# pile à l'heure, moins chargées) : chaque passage régénère la même image pour la même date, et ne commite que si elle change.
 on:
   schedule:
-    - cron: '0 3 * * *'
+    - cron: '17 22 * * *'
+    - cron: '43 0 * * *'
+    - cron: '23 2 * * *'
+    - cron: '37 3 * * *'
   workflow_dispatch:
     inputs:
       date:
