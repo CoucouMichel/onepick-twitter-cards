@@ -38,5 +38,9 @@ jobs:
             echo "Aucun nouveau maillot."
           else
             git commit -m "Maillots : synchronisation automatique du bucket team-logos"
+            for i in 1 2 3 4; do
+              git pull --rebase -q origin main && git push && break
+              sleep $((i * 5))
+            done
             git push
           fi
