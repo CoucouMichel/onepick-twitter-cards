@@ -1,8 +1,7 @@
-Récap 2026-10-26 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
+Récap 2026-10-28 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
 --- FAITS pour le texte du post ---
-Héros : FC Andorra 2-3 Burgos · pick Burgos · cote 3.85 · +54 pts · Momo69, Riton, Ledoux  (3 joueurs)
-#2    : Rizespor 3-4 Trabzonspor · pick Trabzonspor · cote 2.07 · +41 pts · CoucouMichel, Annak
-#3    : Los Angeles 2-2 Los Angeles Galaxy · pick Los Angeles Galaxy · cote 5.11 · +36 pts · Wat, Josay
-#4    : Sevilla 2-0 Osasuna · pick Sevilla · cote 1.95 · +35 pts · Daf, Gitano, JerryDje, TontonMoom
-Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 31 joueurs, 31 picks réglés sur 10 matchs, 20 gagnants (65%), 881 pts distribués
-Pas de braquage (aucun pick gagnant à cote >= 4).
+Héros : Milan 2-4 Bologna · pick Bologna · cote 5.20 · +72 pts · PERSONNE ne l'avait pické  (0 joueur)
+#2    : Genoa 2-0 Juventus · pick Genoa · cote 5.40 · +69 pts · Bobiche  [BRAQUAGE]
+#3    : Hannover 96 0-2 Kaiserslautern · pick FC Kaiserslautern · cote 3.70 · +52 pts · PERSONNE ne l'avait pické
+#4    : Dynamo Dresden 2-0 Schalke 04 · pick Dynamo Dresden · cote 3.60 · +51 pts · PERSONNE ne l'avait pické
+Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 32 joueurs, 32 picks réglés sur 16 matchs, 14 gagnants (44%), 702 pts distribués
