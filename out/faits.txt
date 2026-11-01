@@ -1,7 +1,7 @@
-Récap 2026-10-30 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
+Récap 2026-10-31 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
 --- FAITS pour le texte du post ---
-Héros : Villarreal 0-1 Espanyol · pick Espanyol · cote 5.33 · +63 pts · PERSONNE ne l'avait pické  (0 joueur)
-#2    : Elversberg 4-1 Mainz 05 · pick SV Elversberg · cote 3.20 · +52 pts · PERSONNE ne l'avait pické
-#3    : Nice 5-2 Rennes · pick Nice · cote 2.71 · +52 pts · PERSONNE ne l'avait pické
-#4    : Metz 1-3 Pau FC · pick Pau FC · cote 3.05 · +46 pts · SamLyon
-Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 34 joueurs, 34 picks réglés sur 12 matchs, 11 gagnants (32%), 537 pts distribués
+Héros : Fenerbahce 1-2 Goztepe · pick Goztepe · cote 7.10 · +81 pts · PERSONNE ne l'avait pické  (0 joueur)
+#2    : West Ham 1-3 West Brom · pick West Brom · cote 5.33 · +68 pts · PERSONNE ne l'avait pické
+#3    : Guingamp 3-0 Saint-Étienne · pick Guingamp · cote 3.90 · +59 pts · PERSONNE ne l'avait pické
+#4    : Bayer Leverkusen 2-4 Stuttgart · pick VfB Stuttgart · cote 3.73 · +57 pts · PERSONNE ne l'avait pické
+Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 33 joueurs, 33 picks réglés sur 26 matchs, 19 gagnants (58%), 853 pts distribués
