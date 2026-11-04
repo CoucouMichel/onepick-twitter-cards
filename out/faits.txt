@@ -1,7 +1,8 @@
-Récap 2026-11-02 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
+Récap 2026-11-03 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
 --- FAITS pour le texte du post ---
-Héros : Atalanta 0-3 Parma · pick Parma · cote 6.60 · +86 pts · Fabinho31  (1 joueur)
-#2    : Oviedo 2-3 Las Palmas · pick Las Palmas · cote 4.30 · +58 pts · Gitano
-#3    : Los Angeles 1-3 Minnesota United · pick Minnesota United · cote 4.30 · +58 pts · PERSONNE ne l'avait pické
-#4    : Genclerbirligi 5-0 Alanyaspor · pick Genclerbirligi · cote 2.66 · +57 pts · Gast
-Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 34 joueurs, 34 picks réglés sur 14 matchs, 23 gagnants (68%), 838 pts distribués
+Héros : Villarreal 0-6 Paris Saint Germain · pick Paris Saint Germain · cote 1.61 · +61 pts · Daf, Tomtom91, Liwoj  (3 joueurs)
+#2    : Derby 0-4 Norwich City · pick Norwich City · cote 2.05 · +46 pts · Riton
+#3    : Portsmouth 3-1 Swansea · pick Portsmouth FC · cote 2.55 · +41 pts · Ledoux
+#4    : Charlton 0-1 Bolton · pick Bolton · cote 3.10 · +41 pts · PERSONNE ne l'avait pické
+Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 33 joueurs, 33 picks réglés sur 13 matchs, 14 gagnants (42%), 674 pts distribués
+Pas de braquage (aucun pick gagnant à cote >= 4).
