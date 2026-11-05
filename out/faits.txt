@@ -1,8 +1,7 @@
-Récap 2026-11-03 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
+Récap 2026-11-04 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
 --- FAITS pour le texte du post ---
-Héros : Villarreal 0-6 Paris Saint Germain · pick Paris Saint Germain · cote 1.61 · +61 pts · Daf, Tomtom91, Liwoj  (3 joueurs)
-#2    : Derby 0-4 Norwich City · pick Norwich City · cote 2.05 · +46 pts · Riton
-#3    : Portsmouth 3-1 Swansea · pick Portsmouth FC · cote 2.55 · +41 pts · Ledoux
-#4    : Charlton 0-1 Bolton · pick Bolton · cote 3.10 · +41 pts · PERSONNE ne l'avait pické
-Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 33 joueurs, 33 picks réglés sur 13 matchs, 14 gagnants (42%), 674 pts distribués
-Pas de braquage (aucun pick gagnant à cote >= 4).
+Héros : Lens 1-9 Como · pick Como · cote 2.18 · +67 pts · Tomtom91  (1 joueur)
+#2    : Fenerbahce 3-2 Liverpool · pick Fenerbahce · cote 4.60 · +61 pts · SamLyon  [BRAQUAGE]
+#3    : Wrexham 2-0 Middlesbrough · pick Wrexham · cote 3.05 · +46 pts · PERSONNE ne l'avait pické
+#4    : Viking 4-1 Sabah · pick Viking · cote 1.48 · +45 pts · Le Snake
+Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 34 joueurs, 34 picks réglés sur 13 matchs, 20 gagnants (59%), 829 pts distribués
