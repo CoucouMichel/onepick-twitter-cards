@@ -1,7 +1,8 @@
-Récap 2026-11-05 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
+Récap 2026-11-06 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
 --- FAITS pour le texte du post ---
-Héros : Lincoln Red Imps 1-0 Hajduk Split · pick Lincoln Red Imps · cote 9.50 · +105 pts · PERSONNE ne l'avait pické  (0 joueur)
-#2    : Milan 0-2 Ferencvárosi TC · pick Ferencvárosi TC · cote 8.00 · +95 pts · PERSONNE ne l'avait pické
-#3    : Sunderland 0-2 Dinamo Zagreb · pick Dinamo Zagreb · cote 6.40 · +79 pts · Annak
-#4    : Bayer Leverkusen 0-1 Marseille · pick Marseille · cote 6.40 · +74 pts · Bobiche
-Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 34 joueurs, 34 picks réglés sur 24 matchs, 19 gagnants (56%), 842 pts distribués
+Héros : Montpellier 2-3 Metz · pick Metz · cote 3.75 · +53 pts · Ledoux  (1 joueur)
+#2    : Grenoble 3-2 Reims · pick Grenoble · cote 3.80 · +53 pts · PERSONNE ne l'avait pické
+#3    : Dunkerque 3-0 Guingamp · pick Dunkerque · cote 2.59 · +46 pts · Gitano
+#4    : Boulogne 3-0 Annecy · pick Boulogne · cote 2.45 · +45 pts · PERSONNE ne l'avait pické
+Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 34 joueurs, 34 picks réglés sur 15 matchs, 14 gagnants (41%), 712 pts distribués
+Pas de braquage (aucun pick gagnant à cote >= 4).
