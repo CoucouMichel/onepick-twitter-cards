@@ -1,8 +1,7 @@
-Récap 2026-11-06 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
+Récap 2026-11-07 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
 --- FAITS pour le texte du post ---
-Héros : Montpellier 2-3 Metz · pick Metz · cote 3.75 · +53 pts · Ledoux  (1 joueur)
-#2    : Grenoble 3-2 Reims · pick Grenoble · cote 3.80 · +53 pts · PERSONNE ne l'avait pické
-#3    : Dunkerque 3-0 Guingamp · pick Dunkerque · cote 2.59 · +46 pts · Gitano
-#4    : Boulogne 3-0 Annecy · pick Boulogne · cote 2.45 · +45 pts · PERSONNE ne l'avait pické
-Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 34 joueurs, 34 picks réglés sur 15 matchs, 14 gagnants (41%), 712 pts distribués
-Pas de braquage (aucun pick gagnant à cote >= 4).
+Héros : Preston 1-0 Southampton · pick Preston · cote 5.00 · +60 pts · PERSONNE ne l'avait pické  (0 joueur)
+#2    : Nottingham Forest 3-1 Manchester City · pick Nottingham Forest · cote 4.50 · +60 pts · PERSONNE ne l'avait pické
+#3    : Blackburn 2-1 West Ham · pick Blackburn · cote 4.78 · +58 pts · PERSONNE ne l'avait pické
+#4    : Bristol City 0-5 Norwich City · pick Norwich City · cote 2.55 · +56 pts · PERSONNE ne l'avait pické
+Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 33 joueurs, 33 picks réglés sur 24 matchs, 17 gagnants (52%), 689 pts distribués
