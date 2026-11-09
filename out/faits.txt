@@ -1,7 +1,7 @@
-Récap 2026-11-07 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
+Récap 2026-11-08 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
 --- FAITS pour le texte du post ---
-Héros : Preston 1-0 Southampton · pick Preston · cote 5.00 · +60 pts · PERSONNE ne l'avait pické  (0 joueur)
-#2    : Nottingham Forest 3-1 Manchester City · pick Nottingham Forest · cote 4.50 · +60 pts · PERSONNE ne l'avait pické
-#3    : Blackburn 2-1 West Ham · pick Blackburn · cote 4.78 · +58 pts · PERSONNE ne l'avait pické
-#4    : Bristol City 0-5 Norwich City · pick Norwich City · cote 2.55 · +56 pts · PERSONNE ne l'avait pické
-Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 33 joueurs, 33 picks réglés sur 24 matchs, 17 gagnants (52%), 689 pts distribués
+Héros : Heerenveen 5-3 Feyenoord · pick Heerenveen · cote 4.10 · +66 pts · PERSONNE ne l'avait pické  (0 joueur)
+#2    : San Diego 0-1 Sporting Kansas City · pick Sporting Kansas City · cote 5.60 · +66 pts · PERSONNE ne l'avait pické  [BRAQUAGE]
+#3    : Yeni Çorumspor 0-5 Fenerbahce · pick Fenerbahce · cote 1.70 · +47 pts · PERSONNE ne l'avait pické
+#4    : Le Havre 0-2 Lorient · pick Lorient · cote 2.48 · +45 pts · YassY
+Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 33 joueurs, 33 picks réglés sur 20 matchs, 12 gagnants (36%), 567 pts distribués
