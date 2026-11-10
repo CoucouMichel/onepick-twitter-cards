@@ -1,7 +1,8 @@
-Récap 2026-11-08 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
+Récap 2026-11-09 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
 --- FAITS pour le texte du post ---
-Héros : Heerenveen 5-3 Feyenoord · pick Heerenveen · cote 4.10 · +66 pts · PERSONNE ne l'avait pické  (0 joueur)
-#2    : San Diego 0-1 Sporting Kansas City · pick Sporting Kansas City · cote 5.60 · +66 pts · PERSONNE ne l'avait pické  [BRAQUAGE]
-#3    : Yeni Çorumspor 0-5 Fenerbahce · pick Fenerbahce · cote 1.70 · +47 pts · PERSONNE ne l'avait pické
-#4    : Le Havre 0-2 Lorient · pick Lorient · cote 2.48 · +45 pts · YassY
-Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 33 joueurs, 33 picks réglés sur 20 matchs, 12 gagnants (36%), 567 pts distribués
+Héros : Plymouth Parkway 2-1 Berkhamsted · pick Plymouth Parkway · cote 2.11 · +31 pts · Vitriol, Pepper57, Wat, FC Tribunes, louis2, OlivierQuint, Tomtom91, Cariouf, Fabinho31, Le Snake, Josay, Bobiche, TontonMoom  (13 joueurs)
+#2    : Sabadell 0-0 Real Sociedad B · pick Real Sociedad B · cote 4.90 · +30 pts · Larsouille, brz777, Annak, SamLyon, Ledoux
+#3    : Sabadell 0-0 Real Sociedad B · pick Sabadell · cote 1.65 · +18 pts · YassY, attendezlacreme, Gast, Vairellinho, Gitano, Liwoj, JerryDje, Bastien75, Riton, Matouuu, Seb20, LuchoLapin, Timwololo
+#4    : Plymouth Parkway 2-1 Berkhamsted · pick Berkhamsted · cote 3.00 · +5 pts · CoucouMichel, Momo69, Daf, Djeygaming
+Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 35 joueurs, 35 picks réglés sur 2 matchs, 13 gagnants (37%), 747 pts distribués
+Pas de braquage (aucun pick gagnant à cote >= 4).
