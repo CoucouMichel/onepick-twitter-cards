@@ -1,8 +1,8 @@
-Récap 2026-11-09 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
+Récap 2026-11-10 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
 --- FAITS pour le texte du post ---
-Héros : Plymouth Parkway 2-1 Berkhamsted · pick Plymouth Parkway · cote 2.11 · +31 pts · Vitriol, Pepper57, Wat, FC Tribunes, louis2, OlivierQuint, Tomtom91, Cariouf, Fabinho31, Le Snake, Josay, Bobiche, TontonMoom  (13 joueurs)
-#2    : Sabadell 0-0 Real Sociedad B · pick Real Sociedad B · cote 4.90 · +30 pts · Larsouille, brz777, Annak, SamLyon, Ledoux
-#3    : Sabadell 0-0 Real Sociedad B · pick Sabadell · cote 1.65 · +18 pts · YassY, attendezlacreme, Gast, Vairellinho, Gitano, Liwoj, JerryDje, Bastien75, Riton, Matouuu, Seb20, LuchoLapin, Timwololo
-#4    : Plymouth Parkway 2-1 Berkhamsted · pick Berkhamsted · cote 3.00 · +5 pts · CoucouMichel, Momo69, Daf, Djeygaming
-Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 35 joueurs, 35 picks réglés sur 2 matchs, 13 gagnants (37%), 747 pts distribués
+Héros : Tavernes 0-6 Valencia · pick Valencia · cote 1.02 · +55 pts · CoucouMichel, Josay, brz777, OlivierQuint, Bastien75, LuchoLapin  (6 joueurs)
+#2    : Pamplona 0-3 Eibar · pick Eibar · cote 1.18 · +42 pts · YassY, Timwololo, Vitriol
+#3    : Anaitasuna 1-6 Alavés · pick Alavés · cote 1.03 · +40 pts · Larsouille, Daf, Seb20, Cariouf, Djeygaming, TontonMoom
+#4    : Amorebieta 1-0 UD Logroñés · pick Amorebieta · cote 3.00 · +40 pts · Pepper57
+Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 36 joueurs, 36 picks réglés sur 6 matchs, 23 gagnants (64%), 885 pts distribués
 Pas de braquage (aucun pick gagnant à cote >= 4).
