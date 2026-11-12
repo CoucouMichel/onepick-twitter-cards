@@ -1,8 +1,7 @@
-Récap 2026-11-10 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
+Récap 2026-11-11 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
 --- FAITS pour le texte du post ---
-Héros : Tavernes 0-6 Valencia · pick Valencia · cote 1.02 · +55 pts · CoucouMichel, Josay, brz777, OlivierQuint, Bastien75, LuchoLapin  (6 joueurs)
-#2    : Pamplona 0-3 Eibar · pick Eibar · cote 1.18 · +42 pts · YassY, Timwololo, Vitriol
-#3    : Anaitasuna 1-6 Alavés · pick Alavés · cote 1.03 · +40 pts · Larsouille, Daf, Seb20, Cariouf, Djeygaming, TontonMoom
-#4    : Amorebieta 1-0 UD Logroñés · pick Amorebieta · cote 3.00 · +40 pts · Pepper57
-Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 36 joueurs, 36 picks réglés sur 6 matchs, 23 gagnants (64%), 885 pts distribués
-Pas de braquage (aucun pick gagnant à cote >= 4).
+Héros : Sheffield Wednesday 0-4 Accrington Stanley · pick Accrington Stanley · cote 4.30 · +68 pts · brz777, Annak  (2 joueurs)
+#2    : Barnsley 5-2 Oldham Athletic · pick Barnsley · cote 1.95 · +55 pts · louis2, Momo69, Gitano, JerryDje, Matouuu, Djeygaming
+#3    : Bangladesh 4-0 Sri Lanka · pick Bangladesh · cote 2.00 · +50 pts · LuchoLapin, Fito, FC Tribunes
+#4    : Vietnam 2-0 Chinese Taipei · pick Vietnam · cote 1.03 · +30 pts · OlivierQuint, TontonMoom, CoucouMichel, Liwoj, Cariouf, Ledoux, Timwololo, Bobiche
+Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 37 joueurs, 37 picks réglés sur 5 matchs, 24 gagnants (65%), 906 pts distribués
