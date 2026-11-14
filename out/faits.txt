@@ -1,8 +1,7 @@
-Récap 2026-11-12 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
+Récap 2026-11-13 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
 --- FAITS pour le texte du post ---
-Héros : Italy 3-1 France · pick Italy · cote 3.94 · +54 pts · Riton  (1 joueur)
-#2    : New Zealand 5-0 India · pick New Zealand · cote 1.30 · +43 pts · PERSONNE ne l'avait pické
-#3    : Albania 2-0 Finland · pick Albania · cote 2.05 · +36 pts · Gast, FC Tribunes
-#4    : Benin 4-1 Central African Republic · pick Benin · cote 1.59 · +36 pts · PERSONNE ne l'avait pické
-Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 36 joueurs, 36 picks réglés sur 15 matchs, 16 gagnants (44%), 632 pts distribués
-Pas de braquage (aucun pick gagnant à cote >= 4).
+Héros : Tunisia 0-2 Libya · pick Libya · cote 12.00 · +135 pts · Riton  (1 joueur)
+#2    : Mozambique 0-1 Ethiopia · pick Ethiopia · cote 6.80 · +78 pts · PERSONNE ne l'avait pické
+#3    : Dijon 1-2 Orléans · pick Orléans · cote 5.75 · +68 pts · PERSONNE ne l'avait pické
+#4    : Saudi Arabia 3-2 South Korea · pick Saudi Arabia · cote 4.61 · +61 pts · PERSONNE ne l'avait pické
+Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 39 joueurs, 39 picks réglés sur 19 matchs, 21 gagnants (54%), 958 pts distribués
