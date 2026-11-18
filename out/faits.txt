@@ -1,8 +1,7 @@
-Récap 2026-11-16 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
+Récap 2026-11-17 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
 --- FAITS pour le texte du post ---
-Héros : Germany 5-0 Netherlands · pick Germany · cote 1.80 · +58 pts · brz777, Gitano, FC Tribunes, louis2  (4 joueurs)
-#2    : Gibraltar 1-1 Malta · pick Gibraltar · cote 7.50 · +53 pts · attendezlacreme
-#3    : Switzerland 4-0 Scotland · pick Switzerland · cote 1.41 · +44 pts · Larsouille, YassY, Frck34, Fito, Annak, Seb20, Ledoux
-#4    : Zimbabwe 3-0 Equatorial Guinea · pick Zimbabwe · cote 2.17 · +42 pts · PERSONNE ne l'avait pické
-Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 39 joueurs, 39 picks réglés sur 13 matchs, 28 gagnants (72%), 1103 pts distribués
-Pas de braquage (aucun pick gagnant à cote >= 4).
+Héros : Togo 3-0 Algeria · pick Togo · cote 6.96 · +90 pts · PERSONNE ne l'avait pické  (0 joueur)
+#2    : Lesotho 2-1 Gabon · pick Lesotho · cote 7.79 · +88 pts · PERSONNE ne l'avait pické  [BRAQUAGE]
+#3    : Japan 1-2 Paraguay · pick Paraguay · cote 5.30 · +63 pts · Gitano
+#4    : Liberia 2-0 Cape Verde · pick Liberia · cote 4.70 · +62 pts · PERSONNE ne l'avait pické
+Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 38 joueurs, 38 picks réglés sur 14 matchs, 20 gagnants (53%), 1040 pts distribués
