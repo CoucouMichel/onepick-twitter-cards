@@ -1,7 +1,8 @@
-Récap 2026-11-17 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
+Récap 2026-11-18 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
 --- FAITS pour le texte du post ---
-Héros : Togo 3-0 Algeria · pick Togo · cote 6.96 · +90 pts · PERSONNE ne l'avait pické  (0 joueur)
-#2    : Lesotho 2-1 Gabon · pick Lesotho · cote 7.79 · +88 pts · PERSONNE ne l'avait pické  [BRAQUAGE]
-#3    : Japan 1-2 Paraguay · pick Paraguay · cote 5.30 · +63 pts · Gitano
-#4    : Liberia 2-0 Cape Verde · pick Liberia · cote 4.70 · +62 pts · PERSONNE ne l'avait pické
-Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 38 joueurs, 38 picks réglés sur 14 matchs, 20 gagnants (53%), 1040 pts distribués
+Héros : Uruguay 5-0 Dominican Republic · pick Uruguay · cote 1.06 · +51 pts · attendezlacreme, SamLyon, Wat, Gast, Bastien75, LuchoLapin, YoungMcCaffrey  (7 joueurs)
+#2    : Argentina 7-0 Costa Rica · pick Argentina · cote 1.14 · +51 pts · Seb20
+#3    : Badajoz 2-5 Tenerife · pick Tenerife · cote 1.66 · +42 pts · PERSONNE ne l'avait pické
+#4    : Chile 0-0 Colombia · pick Colombia · cote 6.75 · +39 pts · Bobiche, FC Tribunes, louis2
+Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 38 joueurs, 38 picks réglés sur 10 matchs, 25 gagnants (66%), 987 pts distribués
+Pas de braquage (aucun pick gagnant à cote >= 4).
