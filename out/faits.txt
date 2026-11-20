@@ -1,8 +1,8 @@
-Récap 2026-11-18 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
+Récap 2026-11-19 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
 --- FAITS pour le texte du post ---
-Héros : Uruguay 5-0 Dominican Republic · pick Uruguay · cote 1.06 · +51 pts · attendezlacreme, SamLyon, Wat, Gast, Bastien75, LuchoLapin, YoungMcCaffrey  (7 joueurs)
-#2    : Argentina 7-0 Costa Rica · pick Argentina · cote 1.14 · +51 pts · Seb20
-#3    : Badajoz 2-5 Tenerife · pick Tenerife · cote 1.66 · +42 pts · PERSONNE ne l'avait pické
-#4    : Chile 0-0 Colombia · pick Colombia · cote 6.75 · +39 pts · Bobiche, FC Tribunes, louis2
-Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 38 joueurs, 38 picks réglés sur 10 matchs, 25 gagnants (66%), 987 pts distribués
+Héros : Corinthians 4-0 Botafogo · pick Corinthians · cote 1.82 · +43 pts · Fito, Vitriol, SamLyon, louis2  (4 joueurs)
+#2    : Cruzeiro 2-1 Palmeiras · pick Cruzeiro · cote 2.85 · +39 pts · Daf, Fabinho31, Le Snake, Ledoux, YoungMcCaffrey
+#3    : Remo 2-0 Chapecoense · pick Remo · cote 1.65 · +37 pts · Bastien75
+#4    : Amiens 2-1 Caen · pick Amiens · cote 2.15 · +32 pts · Pepper57, FaRock, Matouuu
+Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 38 joueurs, 38 picks réglés sur 6 matchs, 20 gagnants (53%), 756 pts distribués
 Pas de braquage (aucun pick gagnant à cote >= 4).
