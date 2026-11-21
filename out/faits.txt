@@ -1,8 +1,7 @@
-Récap 2026-11-19 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
+Récap 2026-11-20 : /home/runner/work/onepick-twitter-cards/onepick-twitter-cards/out/recap.png
 --- FAITS pour le texte du post ---
-Héros : Corinthians 4-0 Botafogo · pick Corinthians · cote 1.82 · +43 pts · Fito, Vitriol, SamLyon, louis2  (4 joueurs)
-#2    : Cruzeiro 2-1 Palmeiras · pick Cruzeiro · cote 2.85 · +39 pts · Daf, Fabinho31, Le Snake, Ledoux, YoungMcCaffrey
-#3    : Remo 2-0 Chapecoense · pick Remo · cote 1.65 · +37 pts · Bastien75
-#4    : Amiens 2-1 Caen · pick Amiens · cote 2.15 · +32 pts · Pepper57, FaRock, Matouuu
-Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 38 joueurs, 38 picks réglés sur 6 matchs, 20 gagnants (53%), 756 pts distribués
-Pas de braquage (aucun pick gagnant à cote >= 4).
+Héros : Athletic Club 0-1 Espanyol · pick Espanyol · cote 6.50 · +75 pts · PERSONNE ne l'avait pické  (0 joueur)
+#2    : Verona 0-2 Cesena · pick Cesena · cote 4.80 · +63 pts · PERSONNE ne l'avait pické
+#3    : FC Andorra 1-3 Leganes · pick Leganes · cote 3.77 · +53 pts · PERSONNE ne l'avait pické
+#4    : Darmstadt 98 3-1 Heidenheim · pick SV Darmstadt 98 · cote 3.45 · +50 pts · PERSONNE ne l'avait pické
+Chiffres (la carte n'affiche pas le nombre de joueurs ; les pseudos, eux, sont cités) : 38 joueurs, 38 picks réglés sur 11 matchs, 10 gagnants (26%), 540 pts distribués
