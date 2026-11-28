@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496.2 496.2" width="512" height="512">
+<defs><style>@font-face{font-family:J;font-weight:800;src:url(data:font/woff2;base64,d09GMgABAAAAAAKMAAgAAAAABBwAAAJIAAISLQAAAAAAAAAAAAAAAAAAAAAAAAAABmAAXAqEIINEATYCJAMkCxQABCAbHQMAjsJxb4qbG9HioQQBr/c1eUmWrmAkK6HaM3NgBVaA6ys/qhN+e2L+owMMnFMXTRsOq3TsVc+yA75FL3g6H0+7JZ0K+EKtO9/I5cRrcsfOQBGr5GBUENtFJ1CT66V+oqVK0noC/hczuIKHtjbUNPCIYBoVt/+hoXpIo8FI+wFEqLAFwciAABN8kJEYhcp/u+GAwI5gSiijihoa/ysOqH+FPXDfHbfdTAKUI4QXhCumw8ArikpVlg4oqijYEeqiuLn4+Lg6D0juLAQ63xnabjFaWmfNcTbM5pTWKxan7SYTa3uVs2FNa7s05qy64gJYZ9VZ2SIyJ5xHO8acultZYqp0heI0XaG8t2BmrclkajdyKK2zWN723PaB6mqMzDk5CdnZuHtxVy7c6UfyTpY7lNsX2Murccq5cWvO2ES20dKStWNsfGt2U9PajK6uyK1aRH95qT5SkDlbVZU5FxW9lLsgYqsW2dW1NgPd9nVL9+nyLeVnu7eg2w7ZcPVFF2LGnkSOOMyFfbp+Pbdn/im6bclut3+Bh2xLt3odDeWGc+vunOnJPKO5OdeYnuirbW0gJ3KBPGByjxYjrT1MKw7ryswM69S09tC0xYVqWljn83dpxe1h6LbAusUZJVP1taVTizNrN7gd3Bjy83xg0PmfIRsBQAKEV8LKhuWJA+75Xx1k+WPAs8vxAQDvv/xF7b+f6m7VDbBDACCB8uIXE8TfsqVI2sgRa8mXFeJFHboUdJPiIvC+Ks/zwLYm136wiSOj2NOLqjFXsQ==) format('woff2');}</style>
+<clipPath id="b"><path d="M386.3,149.1c-5.7-35.1-24.9-39.6-24.9-39.6l-72.1-29.4l-9.8-4.8l-31.1-2.5l-31.7,2.6l-9.8,4.8l-72.1,29.4c0,0-19.1,4.5-24.9,39.6l-11.4,44.2l50.3,16.2l5.8-19c0,0,21.1,59.4,1.3,214.5c0,0,31.6,13.1,91.9,13.1s92.6-13.1,92.6-13.1c-19.8-155.1,1.3-214.5,1.3-214.5l5.8,19l50.3-16.2L386.3,149.1z"/></clipPath>
+<linearGradient id="sh" x1="0" x2="1"><stop offset="0" stop-color="#000" stop-opacity=".22"/><stop offset=".22" stop-color="#000" stop-opacity="0"/><stop offset=".78" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".25"/></linearGradient>
+<linearGradient id="sv" x1="0" y1="0" x2="0" y2="1"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".14"/></linearGradient></defs>
+<ellipse cx="248" cy="466" rx="120" ry="9" fill="#000" opacity=".18"/>
+<path d="M386.3,149.1c-5.7-35.1-24.9-39.6-24.9-39.6l-72.1-29.4l-9.8-4.8l-31.1-2.5l-31.7,2.6l-9.8,4.8l-72.1,29.4c0,0-19.1,4.5-24.9,39.6l-11.4,44.2l50.3,16.2l5.8-19c0,0,21.1,59.4,1.3,214.5c0,0,31.6,13.1,91.9,13.1s92.6-13.1,92.6-13.1c-19.8-155.1,1.3-214.5,1.3-214.5l5.8,19l50.3-16.2L386.3,149.1z" fill="#d71920"/>
+<g clip-path="url(#b)">
+ <path d="M60,150 L150,196 L128,260 L40,215 Z" fill="#1a1a1a"/><path d="M436,150 L346,196 L368,260 L456,215 Z" fill="#1a1a1a"/>
+ <path d="M206,76 Q248,128 290,76 L290,60 L206,60 Z" fill="#1a1a1a"/>
+ <rect width="496" height="496" fill="url(#sh)"/><rect width="496" height="496" fill="url(#sv)"/>
+</g>
+<path d="M214,80 Q248,122 282,80" fill="none" stroke="#d71920" stroke-width="9" opacity=".9"/>
+<path d="M386.3,149.1c-5.7-35.1-24.9-39.6-24.9-39.6l-72.1-29.4l-9.8-4.8l-31.1-2.5l-31.7,2.6l-9.8,4.8l-72.1,29.4c0,0-19.1,4.5-24.9,39.6l-11.4,44.2l50.3,16.2l5.8-19c0,0,21.1,59.4,1.3,214.5c0,0,31.6,13.1,91.9,13.1s92.6-13.1,92.6-13.1c-19.8-155.1,1.3-214.5,1.3-214.5l5.8,19l50.3-16.2L386.3,149.1z" fill="none" stroke="#000" stroke-opacity="0.35" stroke-width="2.2" stroke-linejoin="round"/>
+<g transform="translate(248 188)"><rect x="-44" y="-13" width="88" height="26" rx="7" fill="#ffffff"/>
+<text x="0" y="6.2" text-anchor="middle" font-family="J" font-weight="800" font-size="16" textLength="72" lengthAdjust="spacingAndGlyphs" fill="#1a1a1a">ONEPICK</text></g></svg>
